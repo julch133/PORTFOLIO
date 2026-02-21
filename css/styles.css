@@ -10993,3 +10993,21 @@ header.masthead h1, header.masthead .h1 {
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
 }
+
+body {
+  background-color: #0b1020 !important;
+  color: #e5e7eb !inportant;
+}
+.bg-light {
+  background-color: #0f172a !important;
+}
+.navbar {
+  background-color: rgba(11,16,32,0.9) !important;
+  backdrop-filter: blur(10px);
+}
+section {
+  background-color: #0b1020;
+}
+hr.divider {
+  background-color: #7c3aed !important;
+}
