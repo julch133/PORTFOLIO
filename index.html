@@ -18,6 +18,58 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
+    <script>
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJ5l6wGtbCQST61d4NhqipwGvtFr3He8p5uLDCuzky0HQU4Vq04hdG06oBhK0l14yvdg/exec";
+
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("submitButton");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    btn.disabled = true;
+    const oldText = btn.textContent;
+    btn.textContent = "Sending...";
+
+    const payload = {
+      name: document.getElementById("name").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      message: document.getElementById("message").value,
+      page: window.location.href,
+      userAgent: navigator.userAgent
+    };
+
+    try {
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (data.ok) {
+        btn.textContent = "Sent ✓";
+        form.reset();
+        setTimeout(() => {
+          btn.textContent = oldText;
+          btn.disabled = false;
+        }, 2500);
+      } else {
+        console.error(data);
+        alert("Something went wrong sending your message. Try again.");
+        btn.textContent = oldText;
+        btn.disabled = false;
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Network error. Try again.");
+      btn.textContent = oldText;
+      btn.disabled = false;
+    }
+  });
+</script>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -186,7 +238,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -230,7 +282,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                            <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send Message</button></div>
                         </form>
                     </div>
                 </div>
