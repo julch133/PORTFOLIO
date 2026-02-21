@@ -179,34 +179,34 @@
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
 
-                        <form id="contactForm">
-  <!-- Name -->
-  <div class="form-floating mb-3">
-    <input class="form-control" id="name" type="text" placeholder="Full name" required />
-    <label for="name">Full name</label>
+                        <form id="contactForm" class="contact-form">
+
+  <div class="mb-4">
+    <label for="name" class="form-label text-light">Full Name</label>
+    <input class="form-control custom-input" id="name" type="text" required>
   </div>
 
-  <!-- Email -->
-  <div class="form-floating mb-3">
-    <input class="form-control" id="email" type="email" placeholder="name@example.com" required />
-    <label for="email">Email address</label>
+  <div class="mb-4">
+    <label for="email" class="form-label text-light">Email</label>
+    <input class="form-control custom-input" id="email" type="email" required>
   </div>
 
-  <!-- Phone (optional) -->
-  <div class="form-floating mb-3">
-    <input class="form-control" id="phone" type="tel" placeholder="(555) 123-4567" />
-    <label for="phone">Phone (optional)</label>
+  <div class="mb-4">
+    <label for="phone" class="form-label text-light">Phone (Optional)</label>
+    <input class="form-control custom-input" id="phone" type="tel">
   </div>
 
-  <!-- Message -->
-  <div class="form-floating mb-3">
-    <textarea class="form-control" id="message" placeholder="Your message" style="height: 10rem" required></textarea>
-    <label for="message">Message</label>
+  <div class="mb-4">
+    <label for="message" class="form-label text-light">Message</label>
+    <textarea class="form-control custom-input" id="message" rows="5" required></textarea>
   </div>
 
   <div class="d-grid">
-    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send Message</button>
+    <button class="btn btn-primary btn-xl" id="submitButton" type="submit">
+      Send Message
+    </button>
   </div>
+
 </form>
                     </div>
                 </div>
