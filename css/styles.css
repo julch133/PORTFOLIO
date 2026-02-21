@@ -11210,3 +11210,28 @@ hr.divider{
 footer{
   border-top: 1px solid rgba(255,255,255,.08);
 }
+/* ===== Clean Dark Contact Form ===== */
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.custom-input {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #E5E7EB;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.custom-input:focus {
+  background-color: rgba(255,255,255,0.08);
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 0.15rem rgba(124,58,237,0.3);
+  color: #ffffff;
+}
+
+.custom-input::placeholder {
+  color: rgba(229,231,235,0.5);
+}
