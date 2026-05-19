@@ -11281,3 +11281,111 @@ footer{
 .project-list li{
   margin:.4rem 0;
 }
+
+/* ===== Freelance Services Page ===== */
+
+.service-page-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.service-page-card {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  height: 100%;
+}
+
+.service-page-card h3 {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.service-page-card p {
+  color: rgba(229, 231, 235, 0.75);
+  margin-bottom: 1rem;
+}
+
+.service-page-card ul {
+  margin-bottom: 0;
+  padding-left: 1.15rem;
+  color: rgba(229, 231, 235, 0.75);
+}
+
+.service-page-card li {
+  margin-bottom: 0.35rem;
+}
+
+.service-page-card li:last-child {
+  margin-bottom: 0;
+}
+
+.service-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(124, 58, 237, 0.16);
+  border: 1px solid rgba(196, 181, 253, 0.25);
+  color: #c4b5fd;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.process-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.process-step {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 1.35rem;
+}
+
+.process-step span {
+  display: inline-block;
+  color: #c4b5fd;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.process-step h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  color: rgba(229, 231, 235, 0.75);
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .service-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .service-page-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
